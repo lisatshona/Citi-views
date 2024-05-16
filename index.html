@@ -179,7 +179,7 @@
                 });
 
                 var marker = L.marker(project.location, { icon: pinIcon }).addTo(map);
-                marker.bindPopup("<b>" + project.name + "</b><br>" + project.description).openPopup();
+                marker.bindPopup("<b>" + project.name + "</b><br>" + project.description + "<button>Read</button>") .openPopup();
             });
         </script>
 
