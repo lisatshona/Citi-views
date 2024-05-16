@@ -1,84 +1,84 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container-fluid {
-    max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px; /* Adjust as needed */
 }
 
 .main {
-    padding: 20px;
+  padding: 20px;
 }
 
 .heading {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Navbar Styles */
 .navbar-brand img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .navbar-nav .nav-item {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .navbar-nav form {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* Map and Legend Layout */
 .row {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .col-md-2 {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Legend Styles */
 .legend {
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .legend-item {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .legend-color {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    margin-right: 5px;
-    border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 
 /* Map Styles */
 #map {
-    height: 400px; /* Adjust the height as needed */
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Center horizontally */
-    margin-right: 70px;
+  height: 400px; /* Adjust the height as needed */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center horizontally */
+  margin-right: 70px;
 }
 
 .information-filters {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center; /* Aligns the content to the center */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Aligns the content to the center */
 }
 
 .information-filters button {
-    margin: 0 5px; /* Adjust margins as needed */
+  margin: 0 5px; /* Adjust margins as needed */
 }
