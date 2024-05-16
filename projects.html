@@ -2,276 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a04d21dfd1.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/portfolio.css" />
-    <meta name="description" content="Thandokazi is a front-end engineer based in South Africa" />
-    <title>Cape Town Projects</title>
-    <style>
-        :root {
-            --branding-color: #1ecefa;
-            --secondary-color: #f9f7fe;
-            --heading-font-family: "Playfair Display", serif;
-            --default-font-family: "Poppins", sans-serif;
-        }
-
-        body {
-            font-family: var(--default-font-family);
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: black;
-            font-family: var(--heading-font-family);
-            font-weight: bold;
-        }
-
-        h1 {
-            font-size: 96px;
-        }
-
-        h2 {
-            font-size: 44px;
-        }
-
-        h3 {
-            font-size: 34px;
-        }
-
-        p {
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 30px;
-        }
-
-        a {
-            color: #0d6efd;
-            text-decoration: underline;
-        }
-
-        .content-container {
-            padding: 60px 20px;
-        }
-
-        .content h1 {
-            font-size: 64px;
-            line-height: 80px;
-        }
-
-        .content h2 {
-            font-size: 18px;
-            font-family: var(--default-font-family);
-        }
-
-        .content h3 {
-            font-size: 24px;
-            line-height: 1.5px;
-            font-family: var(--default-font-family);
-        }
-
-        .content p {
-            font-size: 14px;
-        }
-
-        .text-muted {
-            color: #6c757d !important;
-        }
-
-        .content {
-            margin: 30px;
-        }
-
-        .btn-branding {
-            background-color: var(--branding-color);
-            border-radius: 4px;
-            color: white;
-            font-size: 18px;
-            line-height: 27px;
-            padding: 10px 20px;
-        }
-
-        .project-description {
-            padding: 120px 60px;
-        }
-
-        input {
-            padding: 50px 40px 50px 40px;
-        }
-
-        footer {
-            margin: 60px 0;
-        }
-
-        footer .contact-box {
-            background: var(--secondary-color);
-            padding: 30px 120px;
-            border-radius: 10px;
-        }
-
-        footer .contact-box p {
-            margin: 0;
-        }
-
-        .social-links a {
-            margin: 0 20px;
-            color: var(--branding-color);
-            background-color: var(--secondary-color);
-            padding: 10px 14px;
-            border-radius: 50%;
-            font-size: 28px;
-            transition: all 100ms ease-in-out;
-        }
-
-        .social-links a:hover {
-            color: white;
-            background-color: var(--branding-color);
-        }
-
-        @media (max-width: 900px) {
-            h1 {
-                font-size: 44px;
-            }
-
-            h2 {
-                font-size: 44px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .project-description {
-                padding: 0;
-                text-align: center;
-            }
-
-            nav a {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="Your Logo" height="30">
-                </a>
-                <!-- Navbar links -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <!-- Search bar -->
-                        <li class="nav-item">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </div>
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col">
-                <div class="project-description">
-                    <h2 class="">Trending Projects</h2>
-                    <p class=" text-muted">
-                    <h3>Road project</h3>
-
-                    <p>Project C</p>
-                    <p>Project C</p>
-                    <p>Project C</p>
-                    <!-- Add more legend items for additional projects -->
-                    </p>
-                    <h2 class="">Upcoming Projects</h2>
-                    <p class="text-muted">
-                    <h3>Water and sanitation project</h3>
-
-                    <p>Project C</p>
-                    <p>Project C</p>
-                    <p>Project C</p>
-                    <!-- Add more legend items for additional projects -->
-                    </p>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col mb-3 ">
-                    <form>
-                        <div class="mb-3 form-check">
-                            <p><label for="w3review">Have your say:</label></p>
-                            <textarea id="w3review" name="w3review" rows="4" cols="50"
-                                placeholder="Add a comment"></textarea>
-                            <input type="submit" value="Submit" class="btn btn-branding ">
-                        </div>
-                    </form>
-                </div>
-                <div class="col social-links">
-
-                    <a href="https://www.capetown.gov.za/" target="_blank" title="Website">
-                        <i class="fa-solid fa-globe"></i></a>
-                    <a href="mailto:open.innovation@capetown.gov.za" target="_blank" title="Email Profile">
-                        <i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.capetown.gov.za/linkedin" target="_blank" title="Linkedin Profile">
-                        <i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/CityofCT/" target="_blank" title="Facebook Profile">
-                        <i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/CityofCT" target="_blank" title="Twitter Profile"><i
-                            class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/cityofct" target="_blank" title="Instagram Profile"><i
-                            class="fa-brands fa-instagram"></i></a>
-
-                </div>
-            </div>
-
-        </div>
-
-        <footer>
-
-    </div>
-    <p class="text-center mt-4">
-
-        <a href="#" target="_blank"></a>
-    </p>
-    </footer>
-    </div>
-</body>
-
-</html>
-
-
-
-
-
-
-<!--DOCTYPE html
-<html lang="en">
-
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cape Town Projects Map with Legend</title>
@@ -289,17 +19,17 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <Logo >
+            <!-- Logo -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Your Logo" height="30">
             </a>
 
-            <Navbar links >
+            <!-- Navbar links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
 
 
-                    < Search bar >
+                    <!-- Search bar -->
                     <li class="nav-item">
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -331,7 +61,7 @@
                         <div class="legend-color" style="background-color: green;"></div> Project C
                     </div>
                 </div>   
-                <Add more legend items for additional projects >
+                <!-- Add more legend items for additional projects -->
             </div>
         </div>
     </div>
@@ -347,4 +77,4 @@
 
 </body>
 
-html -->
+</html>
