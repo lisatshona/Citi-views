@@ -3,19 +3,17 @@ h1 {
 }
 
 .navbar-nav {
-  flex-direction: row; /* Ensure navigation links are in a row */
+  flex-direction: row; 
 }
 
 .navbar-nav .form-inline {
-  margin-left: 60px; /* Adjust spacing between navigation links and search bar */
+  margin-left: 60px; 
 }
 
 .navbar-nav .nav-item {
-  margin-left: 10px; /* Adjust spacing between navigation links */
+  margin-left: 10px; 
 }
 
-
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,7 +21,7 @@ body {
 }
 
 .container-fluid {
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px; 
 }
 
 .main {
@@ -34,7 +32,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Navbar Styles */
+
 .navbar-brand img {
   margin-right: 10px;
   height: 70px;
@@ -51,7 +49,7 @@ body {
   margin-right: 10px;
 }
 
-/* Map and Legend Layout */
+
 .row {
   margin-bottom: 20px;
 }
@@ -81,23 +79,23 @@ body {
   border-radius: 50%;
 }
 
-/* Map Styles */
+
 #map {
-  height: 100px; /* Adjust the height as needed */
+  height: 100px; 
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto; 
   margin-right: 70px;
 }
 
 .information-filters {
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center; /* Aligns the content to the center */
+  text-align: center; 
 }
 
 .information-filters button {
-  margin: 0 5px; /* Adjust margins as needed */
+  margin: 0 5px; 
 }
 table {
   font-family: arial, sans-serif;

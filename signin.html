@@ -44,17 +44,11 @@
         h1 {
             text-align: center;
             font-size: 40px;
-            /* Adjust the size as needed */
             font-weight: 900;
-            /* 900 is the boldest weight */
             text-align: center;
-            /* Center the heading (optional) */
             margin: 20px 0;
-            /* Add some margin (optional) */
             color: #ffffff;
-            /* Set the text color */
             font-family: Arial, Helvetica, sans-serif;
-            /* Set a sans-serif font */
         }
 
 
@@ -68,29 +62,22 @@
 
         .welcome-section {
             background-image: url('images/Cape-Town-City-Centre.jpeg');
-            /* Replace 'background.jpg' with the path to your image */
             background-size: cover;
             background-position: center;
             height: 100vh;
-            /* Full height of the viewport */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #ffffff;
-            /* Text color */
             text-align: center;
         }
 
         .welcome-content {
             background-color: rgba(0, 0, 0, 0.7);
-            /* Semi-transparent black background */
             padding: 20px;
             border-radius: 10px;
-            /* Optional: Rounded corners */
             max-width: 900px;
-            /* Adjust as needed */
             width: 100%;
-            /* Ensures the width scales with the viewport */
             margin: 0 20px;
         }
 
@@ -190,8 +177,7 @@
     });
 
     function signIn(email, password) {
-        // Placeholder function for sign-in logic
-        // Replace this with actual sign-in verification logic
+
         return true;
     }
 
@@ -199,18 +185,15 @@
     function login(email, password) {
     $.ajax({
         type: 'POST',
-        url: '/login', // Backend endpoint for user login
+        url: '/login', 
         data: JSON.stringify({ email: email, password: password }),
         contentType: 'application/json',
         success: function (response) {
-            // Login successful
+            
             console.log('Login successful');
-            // Optionally, redirect user to another page after successful login
         },
         error: function (xhr, status, error) {
-            // Login failed
             console.error('Login failed:', error);
-            // Optionally, display an error message to the user
         }
     });
 }

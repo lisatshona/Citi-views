@@ -67,30 +67,24 @@
 
         .welcome-section {
             background-image: url('images/Cape-Town-City-Centre.jpeg');
-            /* Replace 'background.jpg' with the path to your image */
             background-size: cover;
             background-position: center;
             height: 100vh;
-            /* Full height of the viewport */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #ffffff;
-            /* Text color */
             text-align: center;
         }
 
         .welcome-content {
             background-color: rgba(0, 0, 0, 0.7);
-            /* Semi-transparent black background */
             padding: 20px;
             border-radius: 10px;
-            /* Optional: Rounded corners */
             max-width: 900px;
-            /* Adjust as needed */
             width: 100%;
-            /* Ensures the width scales with the viewport */
             margin: 0 20px;
+    
         }
 
         .welcome-section h1 {
@@ -131,14 +125,12 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <!-- Logo -->
+            
             <a class="navbar-brand" href="index.html">
                 <img src="images/Logo_of_Cape_Town,_South_Africa.svg.png" alt="Your Logo" height="30">
             </a>
-            <!-- Navbar links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <!-- Search bar -->
                     <li class="nav-item">
                         <!--form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -179,15 +171,16 @@
             <div class="mt-3 text-center">
                 <button class="btn btn-primary" onclick="filterProjects('blue')">Water and Sanitation</button>
                 <button class="btn btn-danger" onclick="filterProjects('red')">Construction</button>
-                <button class="btn btn-success" onclick="filterProjects('green')">Road</button>
+                <button class="btn btn-success" onclick="filterProjects('green')">Roads</button>
                 <button class="btn btn-warning" onclick="filterProjects('yellow')">Waste Management</button>
                 <button class="btn btn-secondary" onclick="filterProjects('all')">Show All Projects</button>
             </div><br>
             <div class="row">
                 
                     <div class="col-12 col-md-3 mb-4 upcoming-projects">
-                        <h4>Upcoming Projects</h4>
+                        
                         <div class="legend">
+                            <h4>Upcoming Projects</h4>
                             <div class="legend-item">
                                 <div class="legend-color" style="background-color: green;"></div> 
                                 <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-74c-2023-24">Comment on the draft contract relating to professional services for various City Urban Waste Management facilities</a></p>
@@ -200,7 +193,7 @@
                                 <div class="legend-color" style="background-color: rgb(147, 147, 236);"></div> <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-68c-2019-20">Comment on the amendment of an existing contract relating to Gordon’s Bay Sewer Pump Station and Rising Main</a></p>
                                 
                             </div>
-                            <!-- Add more legend items for additional projects -->
+                            
                         </div>
                     </div>
             
@@ -239,12 +232,12 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         function signIn(email, password) {
-            // Placeholder function for sign in
+            
             return true;
         }
 
         function register(username, email, password) {
-            // Placeholder function for registration
+            
             return true;
         }
 
@@ -252,12 +245,12 @@
             $(this).addClass('hidden');
             $('#joinLink').addClass('hidden');
             $('#profileItem').removeClass('hidden');
-            var initials = "JD"; // Should be replaced with actual initials from user data
+            var initials = "JD"; 
             $('#profileIcon').text(initials);
         });
 
-        // Initialize map
-        var map = L.map('map').setView([-33.9249, 18.4241], 13); // Cape Town coordinates
+        
+        var map = L.map('map').setView([-33.9249, 18.4241], 13); 
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,

@@ -43,17 +43,11 @@
         h1 {
             text-align: center;
             font-size: 40px;
-            /* Adjust the size as needed */
             font-weight: 900;
-            /* 900 is the boldest weight */
             text-align: center;
-            /* Center the heading (optional) */
             margin: 20px 0;
-            /* Add some margin (optional) */
             color: #ffffff;
-            /* Set the text color */
             font-family: Arial, Helvetica, sans-serif;
-            /* Set a sans-serif font */
         }
 
 
@@ -67,29 +61,22 @@
 
         .welcome-section {
             background-image: url('images/Cape-Town-City-Centre.jpeg');
-            /* Replace 'background.jpg' with the path to your image */
             background-size: cover;
             background-position: center;
             height: 100vh;
-            /* Full height of the viewport */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #ffffff;
-            /* Text color */
             text-align: center;
         }
 
         .welcome-content {
             background-color: rgba(0, 0, 0, 0.7);
-            /* Semi-transparent black background */
             padding: 20px;
             border-radius: 10px;
-            /* Optional: Rounded corners */
             max-width: 900px;
-            /* Adjust as needed */
             width: 100%;
-            /* Ensures the width scales with the viewport */
             margin: 0 20px;
         }
 
@@ -131,14 +118,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <!-- Logo -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/Logo_of_Cape_Town,_South_Africa.svg.png" alt="Your Logo" height="30">
             </a>
-            <!-- Navbar links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <!-- Search bar -->
                     <li class="nav-item">
                         <!--form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -203,18 +187,16 @@
         function register(username, email, password) {
     $.ajax({
         type: 'POST',
-        url: '/register', // Backend endpoint for user registration
+        url: '/register', 
         data: JSON.stringify({ username: username, email: email, password: password }),
         contentType: 'application/json',
         success: function (response) {
-            // Registration successful
+            
             console.log('Registration successful');
-            // Optionally, redirect user to another page after successful registration
+            
         },
-        error: function (xhr, status, error) {
-            // Registration failed
+        error: function (xhr, status, error) { 
             console.error('Registration failed:', error);
-            // Optionally, display an error message to the user
         }
     });
 }
