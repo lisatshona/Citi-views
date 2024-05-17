@@ -2,6 +2,19 @@ h1 {
   text-align: center;
 }
 
+.navbar-nav {
+  flex-direction: row; /* Ensure navigation links are in a row */
+}
+
+.navbar-nav .form-inline {
+  margin-left: 60px; /* Adjust spacing between navigation links and search bar */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px; /* Adjust spacing between navigation links */
+}
+
+
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
