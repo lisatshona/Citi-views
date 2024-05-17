@@ -99,3 +99,11 @@ body {
 .information-filters button {
   margin: 0 5px; /* Adjust margins as needed */
 }
+.comment-block{
+  
+
+}
+.name p{
+  border: 30px 30px 30px 30px;
+  border-color: blue;
+}
