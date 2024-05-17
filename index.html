@@ -122,10 +122,19 @@
             <div class="col-3">
                 
                     <div id="projects">
-                        <h2>Upcoming Projects</h2>
+                        <h3>Upcoming Projects</h3>
                         <div class="legend">
                             <div class="legend-item">
-                                <div class="legend-color" style="background-color: green;"></div> Project C
+                                <div class="legend-color" style="background-color: green;"></div> <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-74c-2023-24">Comment on the draft contract relating to professional services for various City Urban Waste Management facilities</a></p>
+                                <p>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: yellow;"></div> <p><a href="//www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/proposed-optimisation-of-gugulethu-community-hall">Comment on the proposed optimisation of Gugulethu Community Hall</a></p>
+                                <p>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(147, 147, 236);"></div> <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-68c-2019-20">Comment on the amendment of an existing contract relating to Gordon’s Bay Sewer Pump Station and Rising Main</a></p>
+                                <p>
                             </div>
                             <!-- Add more legend items for additional projects -->
                         </div>
@@ -139,7 +148,7 @@
             </div>
             <div class="col-2 legend">
                 
-                    <h2>Legend</h2>
+                    <h3>Legend</h3>
                     <div class="legend-item">
                         <span class="legend-color" style="background-color: red;"></span> Project A
                     </div>
@@ -188,7 +197,7 @@
                 });
 
                 var marker = L.marker(project.location, { icon: pinIcon }).addTo(map);
-                marker.bindPopup("<b>" + project.name + "</b><br>" + project.description + "<button>Read</button>") .openPopup();
+                marker.bindPopup("<b>" + project.name + "</b><br>" + project.description + "<a href='projects.html'><button>Read</button></a>").openPopup();
             });
         </script>
 
