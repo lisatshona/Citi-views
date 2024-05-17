@@ -197,6 +197,27 @@
         } else {
             alert('You must accept the privacy policy and terms of use to register.');
         }
+
+
+        //backend
+        function register(username, email, password) {
+    $.ajax({
+        type: 'POST',
+        url: '/register', // Backend endpoint for user registration
+        data: JSON.stringify({ username: username, email: email, password: password }),
+        contentType: 'application/json',
+        success: function (response) {
+            // Registration successful
+            console.log('Registration successful');
+            // Optionally, redirect user to another page after successful registration
+        },
+        error: function (xhr, status, error) {
+            // Registration failed
+            console.error('Registration failed:', error);
+            // Optionally, display an error message to the user
+        }
+    });
+}
     });
 </script>
 

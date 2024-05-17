@@ -194,6 +194,26 @@
         // Replace this with actual sign-in verification logic
         return true;
     }
+
+    // 
+    function login(email, password) {
+    $.ajax({
+        type: 'POST',
+        url: '/login', // Backend endpoint for user login
+        data: JSON.stringify({ email: email, password: password }),
+        contentType: 'application/json',
+        success: function (response) {
+            // Login successful
+            console.log('Login successful');
+            // Optionally, redirect user to another page after successful login
+        },
+        error: function (xhr, status, error) {
+            // Login failed
+            console.error('Login failed:', error);
+            // Optionally, display an error message to the user
+        }
+    });
+}
 </script>
 
 </body>

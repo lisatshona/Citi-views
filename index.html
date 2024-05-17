@@ -177,10 +177,10 @@
             for more information.</p>
 
             <div class="mt-3 text-center">
-                <button class="btn btn-primary" onclick="filterProjects('red')">Water&Sanitation</button>
+                <button class="btn btn-primary" onclick="filterProjects('blue')">Water and Sanitation</button>
+                <button class="btn btn-danger" onclick="filterProjects('red')">Construction</button>
                 <button class="btn btn-success" onclick="filterProjects('green')">Road</button>
-                <button class="btn btn-danger" onclick="filterProjects('all')">Health</button>
-                <button class="btn btn-warning" onclick="filterProjects('all')">Waste Management</button>
+                <button class="btn btn-warning" onclick="filterProjects('yellow')">Waste Management</button>
                 <button class="btn btn-secondary" onclick="filterProjects('all')">Show All Projects</button>
             </div><br>
             <div class="row">
@@ -213,16 +213,16 @@
                 <div class="col-12 col-md-3 mb-4 legend">
                     <h4>Legend</h4>
                     <div class="legend-item">
-                        <span class="legend-color" style="background-color: blue;"></span> Gugulethu Community Hall
+                        <span class="legend-color" style="background-color: blue;"></span> Water and Sanitation
                     </div>
                     <div class="legend-item">
-                        <span class="legend-color" style="background-color: red;"></span> Draft contract relating to professional services
+                        <span class="legend-color" style="background-color: red;"></span>Construction
                     </div>
                     <div class="legend-item">
-                        <span class="legend-color" style="background-color: green;"></span> Project C
+                        <span class="legend-color" style="background-color: green;"></span> Roads
                     </div>
                     <div class="legend-item">
-                        <span class="legend-color" style="background-color: yellow;"></span> Project D
+                        <span class="legend-color" style="background-color: yellow;"></span> Waste Management
                     </div>
                     <!-- Add more legend items for additional projects -->
         
@@ -265,15 +265,23 @@
 
         var redProjects = [
             L.marker([-33.9258, 18.4232], { color: 'red' }).bindPopup('<b>Gugulethu Community Hall</b><br>We have identified Gugulethu Community Hall as a facility that requires investigation in terms of optimising its use for other purposes. Given the dire need for job creation in the community, we propose that the facility be utilised for other social purposes and economic opportunities.<br><a href="projects.html">Read more</a>'),
-            L.marker([-33.9249, 18.4365], { color: 'red' }).bindPopup('<b>Draft contract relating to professional services</b><br>The contract will impose financial obligations on the Municipality for a period longer than eight financial years, but is not expected to be more than eight years in total.<br><a href="projects.html">Read more</a>')
+            L.marker([-33.9249, 18.4365], { color: 'red' }).bindPopup('<b>Draft contract relating to professional services</b><br>The contract will impose financial obligations on the Municipality for a period longer than eight financial years, but is not expected to be more than eight years in total.<br><a href="project2.html">Read more</a>')
         ];
 
         var greenProjects = [
-            L.marker([-33.9270, 18.4424], { color: 'green' }).bindPopup('<b>Green Project 1</b><br><a href="projects.html">Read more</a>'),
-            L.marker([-33.9283, 18.4557], { color: 'green' }).bindPopup('<b>Green Project 2</b><br><a href="projects.html">Read more</a>')
+            L.marker([-33.9187, 18.4234], { color: 'green' }).bindPopup('<b>Road Maintenance Project</b><br>Improving the condition of roads and infrastructure in Cape Town.<a href="projects.html">Read more</a>'),
         ];
 
-        var allProjects = redProjects.concat(greenProjects);
+        var yellowProjects = [
+            L.marker([-33.9186, 18.4235], { color: 'yellow' }).bindPopup('<b>Recycling Awareness Program</b><br>Implementing sustainable waste management practices and recycling initiatives in Cape Town.<a href="projects.html">Read more</a>'),
+        ];
+
+        var blueProjects = [
+            L.marker([-33.9258, 18.4232], { color: 'blue' }).bindPopup('<b>CleanCape Initiative</b><br>A community-driven project aimed at cleaning up Cape Town beaches and coastal areas.<a href="projects.html">Read more</a>'),
+            L.marker([-33.9349, 18.4241], { color: 'blue' }).bindPopup('<b>Water Access Project</b><br>Providing access to clean and safe drinking water for communities in Cape Town.<a href="projects.html">Read more</a>')
+        ];
+
+        var allProjects = redProjects.concat(greenProjects).concat(blueProjects).concat(yellowProjects);
 
         function showProjects(projects) {
             projects.forEach(function (project) {
@@ -295,6 +303,10 @@
                 showProjects(redProjects);
             } else if (color === 'green') {
                 showProjects(greenProjects);
+            } else if (color === 'yellow') {
+                showProjects(yellowProjects);
+            } else if (color === 'blue') {
+                showProjects(blueProjects);
             } else {
                 showProjects(allProjects);
             }
