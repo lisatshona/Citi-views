@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website</title>
+    <title>Citi Builder</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
@@ -106,7 +106,10 @@
             align-items: center;
             margin-bottom: 10px;
         }
-
+        .upcoming-projects p{
+            text-align: left;
+        }
+        
         .legend-color {
             width: 20px;
             height: 20px;
@@ -125,19 +128,15 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                <img src="images/Logo_of_Cape_Town,_South_Africa.svg.png" alt="Your Logo" height="30">
+                <img src="images/logo.png" alt="Your Logo" height="30">
             </a>
-
             <!-- Navbar links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-
-
                     <!-- Search bar -->
                     <li class="nav-item">
                         <form class="d-flex">
@@ -145,13 +144,11 @@
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </li>
-
-
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
+                        <a class="nav-link" href="#">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signin.html">Login</a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -189,16 +186,16 @@
                         <h4>Upcoming Projects</h4>
                         <div class="legend">
                             <div class="legend-item">
-                                <div class="legend-color" style="background-color: green;"></div> <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-74c-2023-24">Comment on the draft contract relating to professional services for various City Urban Waste Management facilities</a></p>
-                                <p>
+                                <div class="legend-color" style="background-color: green;"></div> 
+                                <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-74c-2023-24">Comment on the draft contract relating to professional services for various City Urban Waste Management facilities</a></p>
                             </div>
                             <div class="legend-item">
                                 <div class="legend-color" style="background-color: yellow;"></div> <p><a href="//www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/proposed-optimisation-of-gugulethu-community-hall">Comment on the proposed optimisation of Gugulethu Community Hall</a></p>
-                                <p>
+                                
                             </div>
                             <div class="legend-item">
                                 <div class="legend-color" style="background-color: rgb(147, 147, 236);"></div> <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-68c-2019-20">Comment on the amendment of an existing contract relating to Gordon’s Bay Sewer Pump Station and Rising Main</a></p>
-                                <p>
+                                
                             </div>
                             <!-- Add more legend items for additional projects -->
                         </div>
@@ -258,13 +255,13 @@
         }).addTo(map);
 
         var redProjects = [
-            L.marker([-33.9258, 18.4232], { color: 'red' }).bindPopup('<b>Red Project 1</b><br><a href="project1.html">Read more</a>'),
-            L.marker([-33.9249, 18.4265], { color: 'red' }).bindPopup('<b>Red Project 2</b><br><a href="project2.html">Read more</a>')
+            L.marker([-33.9258, 18.4232], { color: 'red' }).bindPopup('<b>Red Project 1</b><br><a href="projects.html">Read more</a>'),
+            L.marker([-33.9249, 18.4265], { color: 'red' }).bindPopup('<b>Red Project 2</b><br><a href="projects.html">Read more</a>')
         ];
 
         var greenProjects = [
-            L.marker([-33.9270, 18.4224], { color: 'green' }).bindPopup('<b>Green Project 1</b><br><a href="project3.html">Read more</a>'),
-            L.marker([-33.9283, 18.4257], { color: 'green' }).bindPopup('<b>Green Project 2</b><br><a href="project4.html">Read more</a>')
+            L.marker([-33.9270, 18.4224], { color: 'green' }).bindPopup('<b>Green Project 1</b><br><a href="projects.html">Read more</a>'),
+            L.marker([-33.9283, 18.4257], { color: 'green' }).bindPopup('<b>Green Project 2</b><br><a href="projects.html">Read more</a>')
         ];
 
         var allProjects = redProjects.concat(greenProjects);
