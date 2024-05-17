@@ -9,7 +9,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         #map {
             height: 400px;
@@ -141,10 +140,10 @@
                 <ul class="navbar-nav">
                     <!-- Search bar -->
                     <li class="nav-item">
-                        <!--form class="d-flex">
+                        <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                        </form-->
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="register.html">Register</a>
@@ -156,45 +155,68 @@
             </div>
         </div>
     </nav>
-<div class="container mt-4 loginform">
-    <h2>Sign In</h2>
-    <form id="signInForm">
-        <div class="form-group">
-            <label for="signInEmail">Email address</label>
-            <input type="email" class="form-control" id="signInEmail" placeholder="Enter email" required>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Admin Posts</h2>
+            <form id="admin-form" action="#" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+                <div class="mb-3">
+                    <label for="title" class="form-label form-control-label">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                    <div id="title-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="summary" class="form-label form-control-label">Summary of the Project:</label>
+                    <textarea class="form-control" id="summary" name="summary" rows="3" required></textarea>
+                    <div id="summary-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label form-control-label">Category:</label>
+                    <input type="text" class="form-control" id="category" name="category" required>
+                    <div id="category-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label form-control-label">Content:</label>
+                    <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
+                    <div id="content-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label form-control-label">Location:</label>
+                    <input type="text" class="form-control" id="location" name="location" required>
+                    <div id="location-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="startdate" class="form-label form-control-label">Start Date:</label>
+                    <input type="date" class="form-control" id="startdate" name="startdate" required>
+                    <div id="startdate-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="enddate" class="form-label form-control-label">End Date:</label>
+                    <input type="date" class="form-control" id="enddate" name="enddate" required>
+                    <div id="enddate-error" class="error-message"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label form-control-label">Image:</label>
+                    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                    <div id="image-error" class="error-message"></div>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="signInPassword">Password</label>
-            <input type="password" class="form-control" id="signInPassword" placeholder="Password" required>
-        </div>
-        <div class="form-group">
-            <a href="#">Forgot password?</a>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Sign In</button>
-        <a href="register.html" class="btn btn-secondary">Register</a>
-    </form>
-</div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $('#signInForm').submit(function(event) {
-        event.preventDefault();
-        const email = $('#signInEmail').val();
-        const password = $('#signInPassword').val();
-        if (signIn(email, password)) {
-            window.location.href = 'index.html';
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Title validation
+            let title = document.getElementById('title').value.trim();
+            if (title === '') {
+                isValid = false;
+                document.getElementById('title-error').innerText = 'Title is required';
+            } else {
+                document.getElementById('title-error').innerText = '';
+            }
         }
-    });
-
-    function signIn(email, password) {
-        // Placeholder function for sign-in logic
-        // Replace this with actual sign-in verification logic
-        return true;
-    }
-</script>
-
+    </script>
 </body>
 </html>

@@ -158,6 +158,61 @@
                 font-size: 14px;
             }
         }
+
+        .comment-container {
+            text-align: left; /* Align content to the right */
+        }
+        
+        .comment-container h1 {
+            font-size: 36px; /* Decrease font size of the comment title */
+            text-align: left;
+        }
+
+        .comment-box {
+            border: 3px solid #0c0c0c;
+            padding: 8px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            width: 70%;
+            max-width: 600px;
+            margin-left: 0; /* Align the comment box to the left */
+        }
+        .comment-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .comment-date {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .comment-content {
+            margin-bottom: 10px;
+        }
+
+        .comment-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .like-btn, .dislike-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            color: white;
+        }
+
+        .like-btn {
+            background-color: green;
+        }
+
+        .dislike-btn {
+            background-color: red;
+        }
+    
+
+        
     </style>
 </head>
 
@@ -266,17 +321,91 @@
                     <p><a href="//www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/proposed-optimisation-of-gugulethu-community-hall">Comment on the proposed optimisation of Gugulethu Community Hall</a></p>
                 </div>
                 
-                <div class="comments">
-                   <div class="comment-block" >
-                       <div class="name">
-                        <p>User</p>
-                       </div>
-                       <div class="comment">
-                         <p></p>
-                       </div>
-                   </div>
+
+
+
+                
+        </head>
+        <body>
+        
+        <div class="comment-container">
+            <h1>Comments</h1>
+        
+            <div id="comments-section">
+                <!-- Dummy Comment -->
+                <div class='comment-box'>
+                    <div class='comment-header'>
+                        <span class='comment-username'>DummyUser</span>
+                        <span class='comment-date'>2024-05-17 12:00:00</span>
+                    </div>
+                    <div class='comment-content'>
+                        This is a dummy comment to illustrate how the comments will be displayed.
+                    </div>
+                    <div class='comment-actions'>
+                        <button class='like-btn' onclick='likeComment(1)'>
+                            <i class="fas fa-thumbs-up"></i> Liked (0)
+                        </button>
+                        <button class='dislike-btn' onclick='dislikeComment(1)'>
+                            <i class="fas fa-thumbs-down"></i> Disliked (0)
+                        </button>
+                    </div>
                 </div>
-            
+            </div>
+        </div>
+        
+        <script>
+            function likeComment(commentId) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "like_dislike.php", true);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        loadComments();
+                    }
+                };
+                xhr.send("action=like&id=" + commentId);
+            }
+        
+            function dislikeComment(commentId) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "like_dislike.php", true);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        loadComments();
+                    }
+                };
+                xhr.send("action=dislike&id=" + commentId);
+            }
+        
+            function loadComments() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "fetch_comments.php", true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        document.getElementById('comments-section').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        
+            // Load comments when the page loads
+            document.addEventListener("DOMContentLoaded", function() {
+                loadComments();
+            });
+        </script>
+        
+
+
+
+
+
+
+
+
+
+
+               
             </div>
             <div class="row mb-5">
                 <div class="col mb-3 ">
