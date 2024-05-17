@@ -1,68 +1,136 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cape Town Projects Map with Legend</title>
+    <title>Responsive Website</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-
     <style>
-        #container {
-            display: flex;
-        }
-
         #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .container h2,
+        .container p {
+            text-align: center;
+        }
+
+        .container p {
+            font-size: 1.1rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            /* Adjust the size as needed */
+            font-weight: 900;
+            /* 900 is the boldest weight */
+            text-align: center;
+            /* Center the heading (optional) */
+            margin: 20px 0;
+            /* Add some margin (optional) */
+            color: #ffffff;
+            /* Set the text color */
+            font-family: Arial, Helvetica, sans-serif;
+            /* Set a sans-serif font */
+        }
+
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .welcome-section {
+            background-image: url('images/Cape-Town-City-Centre.jpeg');
+            /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
             height: 100vh;
-            flex: 1;
+            /* Full height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            /* Text color */
+            text-align: center;
         }
 
-        #projects {
-            width: 300px;
-            /* Adjust the width as needed */
+        .welcome-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent black background */
             padding: 20px;
+            border-radius: 10px;
+            /* Optional: Rounded corners */
+            max-width: 900px;
+            /* Adjust as needed */
+            width: 100%;
+            /* Ensures the width scales with the viewport */
+            margin: 0 20px;
         }
 
-        #legend {
-            float: right;
-            width: 30%;
-            padding: 10px;
+        .welcome-section h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 1em;
         }
 
         .legend-item {
-            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
         .legend-color {
-            display: inline-block;
             width: 20px;
             height: 20px;
-            margin-right: 5px;
+            margin-right: 10px;
+            display: inline-block;
         }
 
-        /* .legend { 
-      background-color: white; 
-      padding: 10px; 
-      border-radius: 5px; 
-      margin-bottom: 20px;
-    }
-    .legend-item { margin-bottom: 5px; }
-    .legend-color { width: 20px; height: 20px; display: inline-block; margin-right: 5px; } */
+        @media (max-width: 767px) {
+            .legend,
+            .upcoming-projects {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.jpg" alt="Your Logo" height="30">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Logo_of_Cape_Town,_South_Africa.svg.png" alt="Your Logo" height="30">
             </a>
 
             <!-- Navbar links -->
@@ -80,49 +148,45 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link" href="register.html">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="signin.html">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
 
-
-
-
-    <div class="main">
-        <div class="heading">
-            <h1>
-                CITY BUILDER
-            </h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis porro unde iure veritatis, dolor optio
-                architecto velit ratione! Asperiores voluptatum, repellendus incidunt est temporibus odio omnis ex
-                excepturi enim ipsum!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, placeat dolorum at nam dolore
-                illo vitae rerum voluptatem libero laudantium inventore numquam quas omnis adipisci itaque possimus
-                excepturi, deleniti quisquam!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic velit atque, itaque distinctio quibusdam
-                ratione officia molestias ut consectetur pariatur aut expedita quidem ex eius quis. Repellendus nihil
-                excepturi rerum?
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1>CITY BUILDER</h1>
+            <p>Welcome to CityBuilder, the ultimate e-public participation platform designed to bring community
+                involvement to your fingertips. Our innovative platform features an interactive map, allowing you to
+                click on any area and instantly view the ongoing projects and initiatives in that location. Whether
+                you're interested in local infrastructure developments, environmental conservation efforts, or community
+                events, CityBuilder provides detailed information and real-time updates. Empower yourself with
+                knowledge, contribute your voice, and stay connected with the projects shaping your neighborhood. Join
+                us in transforming civic engagement and making a positive impact in your community.
             </p>
         </div>
+    </section>
 
-        <div class="information-filters">
-            <button class="btn btn-primary">Filter 1</button>
-            <button class="btn btn-secondary">Filter 2</button>
-            <button class="btn btn-success">Filter 3</button>
-            <button class="btn btn-danger">Filter 4</button>
-            <button class="btn btn-warning">Filter 5</button>
-        </div>
+    <div class="container mt-4">
+        <h2>Welcome to Our Projects Platform</h2>
+        <p>Explore our various projects and see their progress. You can filter the projects by color and click on them
+            for more information.</p>
 
-        <div class="row">
-            <div class="col-3">
+            <div class="mt-3 text-center">
+                <button class="btn btn-primary" onclick="filterProjects('red')">Show Red Projects</button>
+                <button class="btn btn-success" onclick="filterProjects('green')">Show Green Projects</button>
+                <button class="btn btn-secondary" onclick="filterProjects('all')">Show All Projects</button>
+            </div><br>
+            <div class="row">
                 
-                    <div id="projects">
-                        <h3>Upcoming Projects</h3>
+                    <div class="col-12 col-md-3 mb-4 upcoming-projects">
+                        <h4>Upcoming Projects</h4>
                         <div class="legend">
                             <div class="legend-item">
                                 <div class="legend-color" style="background-color: green;"></div> <p><a href="https://www.capetown.gov.za/City-Connect/Have-your-say/Issues-open-for-public-comment/tender-74c-2023-24">Comment on the draft contract relating to professional services for various City Urban Waste Management facilities</a></p>
@@ -139,16 +203,15 @@
                             <!-- Add more legend items for additional projects -->
                         </div>
                     </div>
-        
-                    
             
-            </div>
-            <div class="col-7">
-                <div id="map"></div>
-            </div>
-            <div class="col-2 legend">
-                
-                    <h3>Legend</h3>
+                    
+
+                <div class="col-12 col-md-6">
+                    <div id="map"></div>
+                </div>
+
+                <div class="col-12 col-md-3 mb-4 legend">
+                    <h4>Legend</h4>
                     <div class="legend-item">
                         <span class="legend-color" style="background-color: red;"></span> Project A
                     </div>
@@ -156,51 +219,82 @@
                         <span class="legend-color" style="background-color: blue;"></span> Project B
                     </div>
                     <!-- Add more legend items for additional projects -->
-               
+        
+                </div>
             </div>
-        </div>
 
+        <!-- <div id="map"></div> -->
+       
+    </div>
 
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            var projects = [
-                 {
-                    name: "Project B",
-                    location: [-33.9249, 18.5875], // Another location in Cape Town
-                    description: "Description of Project B. This project focuses on promoting sustainable tourism in the area."
-                },
-                {  
-                    name: "Project A",
-                    location: [-33.9349, 18.4241], // Cape Town coordinates
-                    description: "Description of Project A. This project aims to improve water access in the community."
-                }
-               
-                // Add more projects as needed
-            ];
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        function signIn(email, password) {
+            // Placeholder function for sign in
+            return true;
+        }
 
-            var map = L.map('map').setView([-33.9249, 18.4241], 12); // Centered at Cape Town
+        function register(username, email, password) {
+            // Placeholder function for registration
+            return true;
+        }
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+        $('#signInLink').click(function () {
+            $(this).addClass('hidden');
+            $('#joinLink').addClass('hidden');
+            $('#profileItem').removeClass('hidden');
+            var initials = "JD"; // Should be replaced with actual initials from user data
+            $('#profileIcon').text(initials);
+        });
 
-            // Add pins for each project
+        // Initialize map
+        var map = L.map('map').setView([-33.9249, 18.4241], 13); // Cape Town coordinates
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        var redProjects = [
+            L.marker([-33.9258, 18.4232], { color: 'red' }).bindPopup('<b>Red Project 1</b><br><a href="project1.html">Read more</a>'),
+            L.marker([-33.9249, 18.4265], { color: 'red' }).bindPopup('<b>Red Project 2</b><br><a href="project2.html">Read more</a>')
+        ];
+
+        var greenProjects = [
+            L.marker([-33.9270, 18.4224], { color: 'green' }).bindPopup('<b>Green Project 1</b><br><a href="project3.html">Read more</a>'),
+            L.marker([-33.9283, 18.4257], { color: 'green' }).bindPopup('<b>Green Project 2</b><br><a href="project4.html">Read more</a>')
+        ];
+
+        var allProjects = redProjects.concat(greenProjects);
+
+        function showProjects(projects) {
             projects.forEach(function (project) {
-                var pinIcon = L.icon({
-                    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-                    iconSize: [25, 41],
-                    iconAnchor: [12, 41],
-                    popupAnchor: [1, -34],
-                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-                    shadowSize: [41, 41],
-                    shadowAnchor: [12, 41]
-                });
-
-                var marker = L.marker(project.location, { icon: pinIcon }).addTo(map);
-                marker.bindPopup("<b>" + project.name + "</b><br>" + project.description + "<a href='projects.html'><button>Read</button></a>").openPopup();
+                project.addTo(map);
             });
-        </script>
+        }
 
+        function hideProjects(projects) {
+            projects.forEach(function (project) {
+                map.removeLayer(project);
+            });
+        }
+
+        showProjects(allProjects);
+
+        function filterProjects(color) {
+            hideProjects(allProjects);
+            if (color === 'red') {
+                showProjects(redProjects);
+            } else if (color === 'green') {
+                showProjects(greenProjects);
+            } else {
+                showProjects(allProjects);
+            }
+        }
+    </script>
 </body>
 
 </html>
+
